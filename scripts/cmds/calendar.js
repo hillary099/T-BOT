@@ -3,7 +3,7 @@ const Calendar = require('telegram-inline-calendar');
 module.exports = {
     config: {
         name: "calendar",
-        author: "Samir Œ",
+        author: "keithkeizzah",
         description: "Display an interactive calendar",
         category: "utility",
         usage: "/calendar",
