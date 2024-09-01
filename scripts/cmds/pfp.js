@@ -1,7 +1,7 @@
 module.exports = {
     config: {
-        name: "pfp",
-        author: "Samir Œ",
+        name: "getpp",
+        author: "keithkeizzah",
         description: "Send the profile picture of a user",
         category: "utility",
         usage: "pfp [username|user_id] (optional, or reply to a user message)",
