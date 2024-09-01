@@ -3,7 +3,7 @@ const axios = require('axios');
 module.exports = {
     config: {
         name: "niji",
-        author: "Samir Œ",
+        author: "keithkeizzah",
         description: "Send an image using the XL API",
         category: "image",
         usage: "<prompt> | <resolution>",
@@ -21,7 +21,7 @@ module.exports = {
         }
 
         try {
-            const apiUrl = `https://apis-samir.onrender.com/niji?prompt=${encodeURIComponent(prompt)}&resolution=${encodeURIComponent(resolution)}`;
+            const apiUrl = `https://samirxpikachuio.onrender.com/niji?prompt=${encodeURIComponent(prompt)}&resolution=${encodeURIComponent(resolution)}`;
             const response = await axios.get(apiUrl, { responseType: 'arraybuffer' });
             const imageData = Buffer.from(response.data, 'binary');
             await bot.sendPhoto(chatId, imageData);
