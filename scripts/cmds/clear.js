@@ -4,7 +4,7 @@ const path = require('path');
 module.exports = {
     config: {
         name: "cache",
-        author: "Samir Œ",
+        author: "keithkeizzah",
         description: "Delete all files inside the caches folder",
         category: "admin",
         usage: "/clearcache",
