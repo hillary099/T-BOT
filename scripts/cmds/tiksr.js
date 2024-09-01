@@ -3,8 +3,8 @@ const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fet
 
 module.exports = {
     config: {
-        name: "tiksr",
-        author: "Samir Œ",
+        name: "tiktok",
+        author: "keithkeizzah",
         description: "Search TikTok videos",
         category: "video",
         usage: "tiksr <query>",
@@ -17,7 +17,7 @@ module.exports = {
         }
 
         const query = encodeURIComponent(args.join(' '));
-        const url = `https://apis-samir.onrender.com/tiktok/search/${query}`;
+        const url = `https://samirxpikachuio.onrender.com/tiktok/search/${query}`;
 
         try {
             const response = await fetch(url);
