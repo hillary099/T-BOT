@@ -1,7 +1,7 @@
 module.exports = {
     config: {
         name: "echo",
-        author: "Samir Œ",
+        author: "keithkeizzah",
         description: "Echo command",
         category: "echo",
         usage: "[message]",
