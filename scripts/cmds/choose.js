@@ -1,6 +1,6 @@
 module.exports = {
     config: {
-        name: 'choose',
+        name: 'vote',
         description: 'Choose between true and false',
         usage: '/choose is this fruit?',
 
