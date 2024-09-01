@@ -5,8 +5,8 @@ const path = require('path');
 
 module.exports = {
     config: {
-        name: "stats",
-        author: "Samir Œ",
+        name: "uptime",
+        author: "keithkeizzah",
         description: "Display bot statistics",
         category: "utility",
         usage: "stats",
@@ -27,7 +27,7 @@ module.exports = {
             const jsFileCount = countJSFiles();
 
             const statsMessage = `
-            📊 Bot Statistics 📊
+            📊 Keith T-Bot Statistics 📊
 
             🕒 Uptime: ${uptimeString}
             💾 Memory Usage: ${memoryUsageMB} MB           
