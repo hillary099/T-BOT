@@ -1,7 +1,7 @@
 module.exports = {
     config: {
         name: "uid",
-        author: "Samir Œ",
+        author: "keithkeizzah",
         description: "Retrieve user ID and username",
         category: "utility",
         usage: "uid",
