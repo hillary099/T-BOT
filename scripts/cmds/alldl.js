@@ -6,7 +6,7 @@ const { Readable } = require('stream');
 module.exports = {
     config: {
         name: "alldl",
-        author: "Samir Œ",
+        author: "keithkeizzah",
         description: "Downloads video from provided link and sends it to the chat",
         category: "utility",
         usage: "/alldownloader <url>",
@@ -19,7 +19,7 @@ module.exports = {
         }
 
         const link = args.join(" ");
-        const apiUrl = `https://noobs-api2.onrender.com/dipto/alldl?url=${encodeURIComponent(link)}`;
+        const apiUrl = `https://samirxpikachuio.onrender.com/alldl?url=${encodeURIComponent(link)}`;
 
         try {
             const response = await axios.get(apiUrl);
