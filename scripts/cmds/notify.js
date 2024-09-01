@@ -10,8 +10,8 @@ let chatGroups = JSON.parse(fs.readFileSync(chatGroupsFile, 'utf8'));
 
 module.exports = {
     config: {
-        name: "notify",
-        author: "Samir Œ",
+        name: "broadcast",
+        author: "keithkeizzah",
         description: "Send a notification to all chat groups",
         category: "admin",
         usage: "/notify <message>",
