@@ -3,7 +3,7 @@ const axios = require('axios');
 module.exports = {
     config: {
         name: "gfx3",
-        author: "Samir Œ",
+        author: "keithkeizzah",
         description: "Send an image ",
         category: "gfx",
         usage: "<prompt>",
@@ -20,7 +20,7 @@ module.exports = {
         }
 
         try {
-            const apiUrl = `https://apis-samir.onrender.com/gfx3?text1=${encodeURIComponent(prompt)}&text2=${encodeURIComponent(prompt2)}`;
+            const apiUrl = `https://samirxpikachuio.onrender.com/gfx3?text1=${encodeURIComponent(prompt)}&text2=${encodeURIComponent(prompt2)}`;
             const response = await axios.get(apiUrl, { responseType: 'arraybuffer' });
             const imageData = Buffer.from(response.data, 'binary');
             await bot.sendPhoto(chatId, imageData);
