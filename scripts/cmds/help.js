@@ -4,7 +4,7 @@ const path = require('path');
 module.exports = {
   config: {
     name: 'help',
-    alias: 'menu',
+    alia: 'menu',
     description: 'Show available commands',
     usage: '/help [command_name]',
     author: 'keithkeizzah',
