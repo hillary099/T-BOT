@@ -3,7 +3,7 @@ const axios = require('axios');
 module.exports = {
     config: {
         name: "weather",
-        author: "Samir Œ",
+        author: "keithkeizzah",
         description: "Fetch and display weather information",
         category: "information",
         usage: "weather <city>",
@@ -20,7 +20,7 @@ module.exports = {
         }
 
         try {
-            const apiUrl = `https://apis-samir.onrender.com/weather/${encodeURIComponent(city)}`;
+            const apiUrl = `https://samirxpikachuio.onrender.com/weather/${encodeURIComponent(city)}`;
             const response = await axios.get(apiUrl);
             const weatherData = response.data;
 
