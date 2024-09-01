@@ -22,8 +22,8 @@ const logger = createGradientLogger();
 
 
 
-const REPO_OWNER = 'samirxpikachuio';
-const REPO_NAME = 'XaR-V2';
+const REPO_OWNER = 'keithkeizzah';
+const REPO_NAME = 'T-BOT';
 
 const VERSION_FILE = path.join(__dirname, 'version.txt');
 
