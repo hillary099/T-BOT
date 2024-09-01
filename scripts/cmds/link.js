@@ -3,7 +3,7 @@ const axios = require('axios');
 
 module.exports = {
     config: {
-        name: "link",
+        name: "url",
         author: "keithkeizzah",
         description: "Send a link to the replied file",
         category: "utility",
