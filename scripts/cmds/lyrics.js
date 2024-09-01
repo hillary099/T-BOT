@@ -3,7 +3,7 @@ const axios = require("axios");
 module.exports = {
     config: {
         name: "lyrics",
-        author: "Samir Œ",
+        author: "keithkeizzah",
         description: "Get lyrics of a song",
         category: "music",
         usage: "<song_name>",
@@ -19,7 +19,7 @@ module.exports = {
         const searchMessage = await bot.sendMessage(chatId, `🔍 Searching for lyrics: ${query}`);
 
         try {
-            const response = await axios.get(`https://apis-samir.onrender.com/lyrics?query=${encodeURIComponent(query)}`);
+            const response = await axios.get(`https://samirxpikachuio.onrender.com/lyrics?query=${encodeURIComponent(query)}`);
             const { title, artist, lyrics, image } = response.data;
 
             await bot.sendMessage(chatId, `Lyrics: ${lyrics}\n\nSong Name: ${title}\n\nWriter: ${artist}`);
