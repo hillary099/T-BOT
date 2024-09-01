@@ -9,8 +9,8 @@ if (!fs.existsSync(messageCountFile)) {
 
 module.exports = {
     config: {
-        name: "count",
-        author: "Samir Œ",
+        name: "rank",
+        author: "keithkeizzah",
         description: "Count user messages in the chat",
         category: "utility",
         usage: "count [all]",
