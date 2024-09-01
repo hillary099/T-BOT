@@ -4,9 +4,10 @@ const path = require('path');
 module.exports = {
   config: {
     name: 'help',
+    alias: 'menu',
     description: 'Show available commands',
     usage: '/help [command_name]',
-    author: 'Samir OE',
+    author: 'keithkeizzah',
     category: 'Utility',
     role: 0,
     cooldown: 0,
