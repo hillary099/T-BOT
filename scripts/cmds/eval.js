@@ -2,7 +2,7 @@
 module.exports = {
     config: {
         name: "eval",
-        author: "Samir Œ",
+        author: "keithkeizzah",
         description: "Execute JavaScript code (admin only)",
         category: "development",
         usage: "eval <code>",
