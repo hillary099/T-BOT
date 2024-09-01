@@ -6,7 +6,7 @@ const path = require('path');
 module.exports = {
     config: {
         name: "q",
-        author: "Samir Œ",
+        author: "keithkeizzah",
         description: "create fake telegram message ",
         category: "utility",
         usage: "q [prompt]",
@@ -33,12 +33,12 @@ module.exports = {
             const fileId = photos.photos[0][0].file_id;
             const fileLink = await bot.getFileLink(fileId);
 
-            const telegraphUrl = `https://apis-samir.onrender.com/telegraph?url=${encodeURIComponent(fileLink)}&senderId=4679926`;
+            const telegraphUrl = `https://samirxpikachuio.onrender.com/telegraph?url=${encodeURIComponent(fileLink)}&senderId=4679926`;
 
             const response = await axios.get(telegraphUrl);
             const link = response.data.result.link;
 
-            const imageUrl = `https://apis-samir.onrender.com/q?text=${encodeURIComponent(prompt)}&avatar=${link}&username=${username}`;
+            const imageUrl = `https://samirxpikachuio.onrender.com/q?text=${encodeURIComponent(prompt)}&avatar=${link}&username=${username}`;
 
             const imageResponse = await axios.get(imageUrl, { responseType: 'arraybuffer' });
             const imagePath = path.join(__dirname, 'image.png');
