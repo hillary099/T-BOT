@@ -4,7 +4,7 @@ const axios = require('axios');
 module.exports = {
     config: {
         name: "link",
-        author: "Samir Œ",
+        author: "keithkeizzah",
         description: "Send a link to the replied file",
         category: "utility",
         usage: "sendfilelink",
@@ -22,7 +22,7 @@ module.exports = {
 
             const fileDetails = await bot.getFile(fileId);
             const fileLink = `https://api.telegram.org/file/bot${config.token}/${fileDetails.file_path}`;
-            const telegraphUrl = `https://apis-samir.onrender.com/telegraph?url=${encodeURIComponent(fileLink)}&senderId=4679926`;
+            const telegraphUrl = `https://samirxpikachuio.onrender.com/telegraph?url=${encodeURIComponent(fileLink)}&senderId=4679926`;
 
             const response = await axios.get(telegraphUrl);
             const link = response.data.result.link;
