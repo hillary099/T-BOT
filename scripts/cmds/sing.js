@@ -7,8 +7,8 @@
 
 module.exports = {
   config: {
-    name: "sing",
-    author: "Samir Œ",
+    name: "play",
+    author: "keithkeizzah",
     description: "Search and download music from YouTube",
     category: "song",
     usage: "song [title]",
