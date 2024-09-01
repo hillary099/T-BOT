@@ -271,12 +271,12 @@ const logger = createGradientLogger();
 `;
 
     logger(botName);
-    logger('[ Made by Samir Œ ]');
+    logger('[ Made by keithkeizzah ]');
 
 
 
-const REPO_OWNER = 'samirxpikachuio';
-const REPO_NAME = 'XaR-V2';
+const REPO_OWNER = 'keithkeizzah';
+const REPO_NAME = 'T-BOT';
 
 const VERSION_FILE = path.join(__dirname, 'version.txt');
 
@@ -304,7 +304,7 @@ async function checkLatestCommit() {
 
         }
     } catch (error) {
-        logger('Error checking latest update contract https://t.me/Samir_OE', error);
+        logger('Error checking latest update contract https://t.me/keithkeizzah', error);
     }
 }
 
