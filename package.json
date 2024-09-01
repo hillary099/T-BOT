@@ -10,7 +10,7 @@
     "stop": "pkill -f node"
   },
   "keywords": [],
-  "author": "Samir Œ",
+  "author": "keithkeizzah",
   "license": "ISC",
   "dependencies": {
     "@types/node": "^18.0.6",
