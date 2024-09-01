@@ -4,7 +4,7 @@ const config = require('../../config.json');
 module.exports = {
     config: {
         name: "adminonly",
-        author: "Samir Œ",
+        author: "keithkeizzah",
         description: "Toggle admin-only mode",
         category: "admin",
         usage: "adminonly <on|off>",
