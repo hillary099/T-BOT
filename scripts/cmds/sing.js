@@ -34,16 +34,24 @@ module.exports = {
 
       // Use the provided API to fetch the MP3 download URL
       const apiUrl = `https://api.giftedtech.my.id/api/download/ytmp3?url=${encodeURIComponent(musicUrl)}&apikey=gifted`;
-      
+
       // Fetch the download link using the API
-      const response = await axios.get(apiUrl);
+      const response = await axios.get(apiUrl, { timeout: 10000 });  // Added timeout of 10 seconds
+
+      console.log(response.data);  // Log the full response to debug the structure
 
       if (response.data && response.data.status === 'success') {
         const downloadUrl = response.data.result.url;  // Assuming the response contains the download URL in `result.url`
 
+        // Ensure the cache folder exists
+        const cachePath = path.join(__dirname, "cache");
+        if (!fs.existsSync(cachePath)) {
+          fs.mkdirSync(cachePath);
+        }
+
         // Download the MP3 file
-        const fileName = `${music.title}.mp3`;
-        const filePath = path.join(__dirname, "cache", fileName);
+        const fileName = `${music.title}.mp3`.replace(/[^a-z0-9]/gi, '_').toLowerCase();  // Replace special characters for safe filenames
+        const filePath = path.join(cachePath, fileName);
 
         // Fetch the audio file and save it locally
         const audioResponse = await axios.get(downloadUrl, { responseType: 'stream' });
@@ -67,11 +75,22 @@ module.exports = {
         });
         
       } else {
-        return bot.sendMessage(chatId, '❌ Failed to fetch the audio from the API.');
+        return bot.sendMessage(chatId, '❌ Failed to fetch the audio from the API. Please try again later.');
       }
     } catch (error) {
       console.error('[ERROR]', error);
-      bot.sendMessage(chatId, 'An error occurred while processing the command.');
+
+      // Check for specific error types
+      if (error.response) {
+        // API error response
+        return bot.sendMessage(chatId, `API error: ${error.response.status} ${error.response.statusText}`);
+      } else if (error.request) {
+        // No response from API
+        return bot.sendMessage(chatId, 'No response received from the API. Please check your internet connection or try again later.');
+      } else {
+        // General error
+        return bot.sendMessage(chatId, 'An error occurred while processing the command. Please try again later.');
+      }
     }
   }
 };
